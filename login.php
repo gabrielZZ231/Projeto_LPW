@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
   <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
   <link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
+
 <body>
   <section class="hero is-primary is-fullheight">
     <div class="hero-body">

@@ -10,22 +10,26 @@
     $email = mysqli_real_escape_string($mysqli, $_POST['email']);
     $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
    
-
-        $sql="SELECT * FROM login WHERE email = '$email' AND senha = md5('$senha')";
+    //Senha criptrografada em MD5
+    $sql="SELECT * FROM login WHERE email = '$email' AND senha = md5('$senha')";
+    
+    $verifica = mysqli_query($mysqli,$sql);
         
-        $verifica = mysqli_query($mysqli,$sql);
-
-        $row=mysqli_num_rows($verifica);
+    // Número de linhas do BD
         
-        if ($row==1){
-            $_SESSION['email'] = $email;
-            header("Location:painel.php");
-            exit();
-        }else{
-            echo"<script language='javascript' type='text/javascript'>
-                alert('Email e/ou senha incorretos');
-                window.location.href='login.php';
-            </script>";
-            die();
-        }
+    $row=mysqli_num_rows($verifica);
+        
+    //Se tem uma linha com essas especificações 
+        
+    if ($row==1){
+        $_SESSION['email'] = $email;
+        header("Location:painel.php");
+        exit();
+    }else{
+        echo"<script language='javascript' type='text/javascript'>
+            alert('Email e/ou senha incorretos');
+            window.location.href='login.php';
+        </script>";
+        die();
+    }
 ?>

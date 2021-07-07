@@ -1,21 +1,23 @@
 <?php
-session_start();
+	session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="utf-8">
 	<title>Formulário LPW</title>
 	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
+
 <body>
-<nav class="container-login">
-    <p>
-      <a href="login.php"><img src="./assets/login-icon.png" alt="Login"></a>
-    </p>
-</nav>
-<section class="section">
+	<nav class="container-login">
+		<p>
+			<a href="login.php"><img src="./assets/login-icon.png" alt="Login"></a>
+		</p>
+	</nav>
+	<section class="section">
 		<div class="container">
 			<div class="column">
 				<div class="column">
@@ -48,7 +50,8 @@ session_start();
 						<div class="field">
 							<label class="label">Dúvida*</label>
 							<div class="control">
-								<textarea name="mensagem" class="textarea" placeholder="Digite a dúvida aqui" maxlength="2000" required> </textarea>
+								<textarea name="mensagem" class="textarea" placeholder="Digite a dúvida aqui"
+									maxlength="2000" required> </textarea>
 							</div>
 						</div>
 
@@ -63,4 +66,5 @@ session_start();
 		</div>
 	</section>
 </body>
+
 </html>

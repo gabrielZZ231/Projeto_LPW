@@ -1,10 +1,10 @@
 <?php
-include('verifica_login.php');
-include_once('conexao.php');
+    include('verifica_login.php');
+    include_once('conexao.php');
 
-
-$query="SELECT * FROM duvida";
-$con= $mysqli->query($query) or die($mysqli->error);
+    //Pega o conteúdo da tabela
+    $query="SELECT * FROM duvida";
+    $con= $mysqli->query($query) or die($mysqli->error);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
