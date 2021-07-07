@@ -14,7 +14,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-            <form action="Controller-Login.php" method="POST" class="box">
+            <form action="validacaoLogin.php" method="POST" class="box">
               <div class="field">
                 <p class="login-icon"><img src="./assets/login-icon.png" alt="Login"></p>
                 <label for="" class="label">Email</label>

@@ -1,5 +1,5 @@
 <?php
-    include('verifica_login.php');
+    include('verificaLogin.php');
     include_once('conexao.php');
 
     //Pega o conteúdo da tabela
@@ -11,7 +11,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Formulário LPW</title>
+    <title>Dúvidas de LPW</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
@@ -35,7 +35,6 @@
                     <div class="table-responsive">
                         <table class="table">
                             <tr class="table is-striped">
-                                <td>ID</td>
                                 <td>Nome</td>
                                 <td>Email</td>
                                 <td>Assunto</td>
@@ -43,12 +42,11 @@
                             </tr>
                             <?php while ($dado = $con->fetch_array()) { ?>
                             <tr class="table is-striped">
-                                <td><?php echo $dado['id'];?></td>
                                 <td><?php echo $dado['nome'];?></td>
                                 <td><?php echo $dado['email'];?></td>
                                 <td><?php echo $dado['assunto'];?></td>
                                 <td><?php echo $dado['mensagem'];?></td>
-                                <td><a href="excluir_duvida.php?codigo=<?php echo $dado['id'];?>">Excluir</a></td>
+                                <td><a href="excluirDuvida.php?codigo=<?php echo $dado['id'];?>">Excluir</a></td>
                             </tr>
                             <?php } ?>
                         </table>

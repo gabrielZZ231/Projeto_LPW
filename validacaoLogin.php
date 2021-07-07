@@ -10,7 +10,7 @@
     $email = mysqli_real_escape_string($mysqli, $_POST['email']);
     $senha = mysqli_real_escape_string($mysqli, $_POST['senha']);
    
-    //Senha criptrografada em MD5
+    //Senha criptrografada em MD5 para evitar SQL injection 1'or'1'='1 
     $sql="SELECT * FROM login WHERE email = '$email' AND senha = md5('$senha')";
     
     $verifica = mysqli_query($mysqli,$sql);
