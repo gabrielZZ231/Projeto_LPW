@@ -9,16 +9,17 @@
             $mensagem = filter_input(INPUT_POST, 'mensagem', FILTER_SANITIZE_STRING);
 
             //Inserir no BD
-            $result_msg_cont = "INSERT INTO Duvida (nome,email,duvida,assunto) VALUES ('$nome', '$email', '$mensagem','$assunto')";
+            $result_msg_cont = "INSERT INTO duvida (nome,email,mensagem,assunto) VALUES ('$nome', '$email', '$mensagem','$assunto')";
             
             $result= mysqli_query($mysqli,$result_msg_cont);
 
             if (mysqli_insert_id($mysqli)) {
-                $_SESSION['msg']="Duvida cadastrada com sucesso!"
-                header("Location:exibir.php");
-            }else {
-                $_SESSION['msg']="Duvida não cadastrada com sucesso!"
                 header("Location:index.php");
-
+                exit();
+        
+            }else {
+                header("Location:index.php");
+                exit();
+               
             }
 ?>

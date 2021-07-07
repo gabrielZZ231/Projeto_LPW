@@ -20,13 +20,6 @@ session_start();
 			<div class="column">
 				<div class="column">
 					<h1 class="title has-text-centered">Formulário de dúvida</h1>
-					<?php
-						if (isset( $_SESSION['msg'])) {
-							echo( $_SESSION['msg']);
-							unset( $_SESSION['msg']);
-						}
-					
-					?>
 					<form action="enviar.php" method="POST">
 						<div class="field">
 							<label class="label">Nome</label>

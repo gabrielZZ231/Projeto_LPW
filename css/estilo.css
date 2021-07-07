@@ -1,15 +1,32 @@
-.container-login{
+.container-login {
     margin-left: 95%;
     margin-top: 1%;
     width: 3%;
     height: 3%;
 }
-.hero-body{
-    background-color: blueviolet;
+
+.hero-body {
+    background-color: blueviolet !important;
 }
-.login-icon{
+
+.login-icon {
     margin-left: auto;
     margin-right: auto;
     width: 25%;
     height: 25%;
+}
+
+.bnt-logout {
+    width: 3% !important;
+    height: 3% !important;
+    float: right !important;
+}
+
+.table-responsive {
+    width: 100% !important;
+}
+
+.table {
+    width: 50% !important;
+    margin: auto;
 }
